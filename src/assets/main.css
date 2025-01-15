@@ -1,0 +1,18 @@
+@import "./base.css";
+label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-b-v3);
+}
+.imp-label {
+  color: var(--color-1-v3);
+}
+.gutter-form {
+  --bs-gutter-y: 1rem;
+  --bs-gutter-x: 2rem;
+}
+.gutter-sec {
+  --bs-gutter-y: 1.5rem;
+  --bs-gutter-x: 1.5rem;
+}

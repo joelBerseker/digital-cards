@@ -1,0 +1,35 @@
+[
+  {
+    "id": "efrain-castillo",
+    "company": 1,
+    "nombre": "Efraín Castillo T.",
+    "puesto": "Consultor",
+    "telefono": "+123456789",
+    "correo": "efrain@inmobiliaria.com",
+    "whatsapp": "+123456789",
+    "redes": {
+      "facebook": "https://facebook.com/efrain",
+      "instagram": "https://instagram.com/efrain",
+      "tiktok": "https://tiktok.com/@efrain",
+      "youtube": "https://youtube.com/efrain",
+      "linkedin": "https://youtube.com/efrain"
+    },
+    "foto": "/image/employee/efrain.png"
+  },
+  {
+    "id": "maria-lopez",
+    "company": 1,
+    "nombre": "María López",
+    "puesto": "Asesora de Ventas",
+    "telefono": "+987654321",
+    "correo": "maria@inmobiliaria.com",
+    "whatsapp": "+987654321",
+    "redes": {
+      "facebook": "https://facebook.com/maria",
+      "instagram": "https://instagram.com/maria",
+      "tiktok": "https://tiktok.com/@maria",
+      "youtube": "https://youtube.com/maria"
+    },
+    "foto": "/image/employee/default.png"
+  }
+]
