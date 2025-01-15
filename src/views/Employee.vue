@@ -58,7 +58,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useRoute } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import employeesData from "@/data/employee.json";
 import companyData from "@/data/company.json";
 
@@ -68,7 +68,16 @@ const empresa = companyData[0];
 
 onMounted(() => {
   const empleadoId = route.params.empleado;
-  empleado.value = employeesData.find((emp) => emp.id == empleadoId);
+  const foundEmpleado = employeesData.find((emp) => emp.id == empleadoId);
+  if (foundEmpleado) {
+    empleado.value = foundEmpleado;
+  } else {
+    // Redirect to error page if employee not found
+    const router = useRouter();
+    router.push({
+      name: "Error",
+    });
+  }
 });
 </script>
 
