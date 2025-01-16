@@ -30,11 +30,20 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import company from "@/data/company.json";
 import employees from "@/data/employee.json";
 
-const employeesList = employees;
+const employeesList = ref([]);
+
 const companyInfo = company[0];
+function filter() {
+  return employees.filter((employee) => employee.company == company[0].id);
+}
+filter();
+onMounted(() => {
+  employeesList.value = filter();
+});
 </script>
 
 <style scoped>
