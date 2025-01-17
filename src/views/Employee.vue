@@ -49,7 +49,7 @@
     <div class="card-footer">
       <div class="footer-links">
         <a href="#" class="share">Compartir</a>
-        <a href="/" class="web">Web</a>
+        <a :href="empleado.web" class="web">Web</a>
         <a href="#" class="qr">QR</a>
       </div>
     </div>

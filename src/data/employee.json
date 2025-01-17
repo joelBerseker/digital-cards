@@ -14,7 +14,8 @@
       "youtube": "https://youtube.com/efrain",
       "linkedin": "https://youtube.com/efrain"
     },
-    "foto": "/image/employee/efrain.png"
+    "foto": "/image/employee/efrain.png",
+    "web": ""
   },
   {
     "id": "maria-lopez",
@@ -30,7 +31,8 @@
       "tiktok": "https://tiktok.com/@maria",
       "youtube": "https://youtube.com/maria"
     },
-    "foto": "/image/employee/default.png"
+    "foto": "/image/employee/default.png",
+    "web": ""
   },
   {
     "id": "felix",
@@ -41,12 +43,11 @@
     "correo": "felix@traccionestrategica.com",
     "whatsapp": "+511934864559",
     "redes": {
-      "facebook": "https://facebook.com/maria",
       "instagram": "https://www.instagram.com/traccion_estrategica",
       "tiktok": "https://www.tiktok.com/@traccion.estrategica",
-      "youtube": "https://youtube.com/maria",
       "linkedin": "http://www.linkedin.com/in/traccion-estrategica"
     },
+    "web": "https://traccionestrategica.com",
     "foto": "/image/employee/felix.jpg"
   },
   {
@@ -64,6 +65,7 @@
       "youtube": "https://youtube.com/maria",
       "linkedin": "https://youtube.com/maria"
     },
-    "foto": "/image/employee/rodrigo.jpg"
+    "foto": "/image/employee/rodrigo.jpg",
+    "web": ""
   }
 ]
