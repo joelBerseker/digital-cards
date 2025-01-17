@@ -88,21 +88,29 @@ onMounted(() => {
 /* Contenedor Principal */
 .employee-card {
   max-width: 400px;
-  margin: 20px auto;
+  width: 100%; /* Asegúrate de que ocupe todo el ancho disponible en móviles */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaciado para los elementos internos */
+  align-items: center;
   padding: 20px;
   border-radius: var(--br-v2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: var(--color-w);
   font-family: "Poppins", sans-serif;
   position: relative;
-  text-align: center;
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
 }
 
 /* Encabezado */
 .card-header {
+  flex-shrink: 0; /* Evita que se reduzca al hacer espacio para otros elementos */
+  text-align: center;
+  padding: 10px 0;
   background: var(--color-2); /* Fondo negro */
-  color: var(--color-1-v3); /* Texto dorado */
-  padding: 20px;
+  color: var(--color-1); /* Texto dorado */
+  width: 100%; /* Ocupa todo el ancho */
   border-top-left-radius: var(--br-v2);
   border-top-right-radius: var(--br-v2);
 }
@@ -140,6 +148,16 @@ onMounted(() => {
   object-fit: cover;
   object-position: center;
 }
+.card-body {
+  flex: 1; /* Hace que ocupe el espacio restante entre el encabezado y el pie */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
 
 /* Texto de Información */
 h2 {
@@ -157,14 +175,13 @@ h2 {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
+  gap: 15px; /* Espaciado entre íconos */
+  margin: 10px 0;
 }
 
 .social-links a {
-  font-size: 32px;
+  font-size: 28px; /* Ajusta para móviles */
   color: var(--color-2);
-  transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
@@ -237,5 +254,28 @@ h2 {
   text-decoration: none;
   color: var(--color-2);
   font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .employee-card {
+    max-width: 100%;
+    height: 100vh;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .employee-photo-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 }
 </style>
