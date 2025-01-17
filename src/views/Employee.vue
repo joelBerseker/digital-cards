@@ -28,7 +28,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <font-awesome-icon :icon="['fab', red]" />
+          <font-awesome-icon :icon="['fab', red]" :class="red" />
         </a>
       </div>
 
@@ -64,13 +64,16 @@ import companyData from "@/data/company.json";
 
 const route = useRoute();
 const empleado = ref({});
-const empresa = companyData[0];
+const empresa = ref({});
 
 onMounted(() => {
   const empleadoId = route.params.empleado;
   const foundEmpleado = employeesData.find((emp) => emp.id == empleadoId);
   if (foundEmpleado) {
     empleado.value = foundEmpleado;
+    empresa.value = companyData.find(
+      (company) => company.id == empleado.value.company
+    );
   } else {
     // Redirect to error page if employee not found
     const router = useRouter();
@@ -82,78 +85,75 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Contenedor Principal */
 .employee-card {
   max-width: 400px;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: var(--br-v2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-  text-align: center;
-  font-family: Arial, sans-serif;
+  background: var(--color-w);
+  font-family: "Poppins", sans-serif;
   position: relative;
+  text-align: center;
 }
 
-/* Header Styles */
+/* Encabezado */
 .card-header {
-  background: #000000;
-  color: #ffd700;
-  padding: 20px 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background: var(--color-2); /* Fondo negro */
+  color: var(--color-1-v3); /* Texto dorado */
+  padding: 20px;
+  border-top-left-radius: var(--br-v2);
+  border-top-right-radius: var(--br-v2);
 }
 
 .company-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 200px;
+  height: auto;
   margin-bottom: 10px;
 }
 
-/* Body Styles */
-.card-body {
-  margin-top: -20px;
+.card-header h1 {
+  font-size: 1.8rem;
+  font-family: "Lilita_One", sans-serif;
+  color: var(--color-1); /* Dorado */
+  margin: 0;
 }
 
+/* Foto del Empleado */
 .employee-photo-wrapper {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 200px;
   border-radius: 50%;
-  margin: 0 auto 10px; /* Centrar y añadir espacio inferior */
-  background: #f4f4f4;
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #555;
+  background: var(--color-w-v3);
 }
 
 .employee-photo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 200px;
+  margin-bottom: 50px;
   border-radius: 50%;
-  border: 3px solid #ffd700;
-  margin-bottom: 10px;
-  object-fit: cover; /* Recorta la imagen manteniendo las proporciones */
-  object-position: center; /* Centra el recorte */
-  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
+/* Texto de Información */
 h2 {
   font-size: 1.5rem;
-  color: #333333;
+  color: var(--color-principal);
 }
 
 .position {
-  color: #777777;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: var(--color-b-v3);
   margin-bottom: 20px;
 }
 
-/* Social Links */
+/* Redes Sociales */
 .social-links {
   display: flex;
   justify-content: center;
@@ -162,17 +162,28 @@ h2 {
 }
 
 .social-links a {
-  font-size: 24px;
-  color: #000;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 32px;
+  color: var(--color-2);
+  transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
-  color: #ffd700; /* Color dorado al pasar el cursor */
-  transform: scale(1.2); /* Ampliación ligera */
+  transform: scale(1.2);
+}
+.facebook {
+  color: #135ca5;
+}
+.instagram {
+  color: #e1306c;
+}
+.tiktok {
+  color: #000;
+}
+.youtube {
+  color: #ff0000;
 }
 
-/* Contact Buttons */
+/* Botones de Contacto */
 .contact-buttons {
   display: flex;
   flex-direction: column;
@@ -182,25 +193,33 @@ h2 {
 .btn {
   display: block;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: var(--br, 8px);
   text-decoration: none;
+  font-size: 1rem;
   text-align: center;
-  color: #ffffff;
+  font-weight: 500;
+  color: var(--color-1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 .btn.call {
-  background: #007bff;
+  background-color: var(--color-2); /* Rojo */
 }
 
 .btn.email {
-  background: #28a745;
+  background-color: var(--color-2); /* Verde Oscuro */
 }
 
 .btn.whatsapp {
-  background: #25d366;
+  background-color: var(--color-2); /* Verde Claro */
 }
 
-/* Footer Styles */
+/* Footer */
 .card-footer {
   margin-top: 20px;
 }
@@ -213,7 +232,7 @@ h2 {
 
 .footer-links a {
   text-decoration: none;
-  color: #007bff;
+  color: var(--color-2);
   font-size: 0.9rem;
 }
 </style>

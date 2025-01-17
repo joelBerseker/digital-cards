@@ -10,5 +10,11 @@
     "nombre": "MG Grupo Inmobiliario",
     "logo": "/image/company/logo_gleaming.png",
     "descripcion": "Una empresa líder en el sector inmobiliario."
+  },
+  {
+    "id": 3,
+    "nombre": "Tracción Estrategica SAC",
+    "logo": "/image/company/traccion_logo.png",
+    "descripcion": "En Tracción Empresarial, ayudamos a las empresas a alcanzar sus objetivos estratégicos mediante metodologías de gestión comprobadas y herramientas eficientes. Creemos que el liderazgo efectivo no se aprende de buenas y malas experiencias previas, sino usando metodologías probadas de gestión. Esa metodología que es como el sistema operativo empresarial integra planeamiento, evaluación de personal, procesos, control de indicadores y otros mas para alinear equipos con la visión de la empresa.."
   }
 ]

@@ -31,5 +31,21 @@
       "youtube": "https://youtube.com/maria"
     },
     "foto": "/image/employee/default.png"
+  },
+  {
+    "id": "felix",
+    "company": 3,
+    "nombre": "Félix Villanueva",
+    "puesto": "Director",
+    "telefono": "934864559",
+    "correo": "felix@traccionestrategica.com",
+    "whatsapp": "+511934864559",
+    "redes": {
+      "facebook": "https://facebook.com/maria",
+      "instagram": "https://instagram.com/maria",
+      "tiktok": "https://tiktok.com/@maria",
+      "youtube": "https://youtube.com/maria"
+    },
+    "foto": "/image/employee/felix.jpg"
   }
 ]

@@ -37,25 +37,25 @@
   font-style: normal;
 }
 :root {
-  --color-1: #38a55a;
-  --color-1-v2: rgb(36, 206, 90);
-  --color-1-v3: rgb(38, 182, 84);
+  --color-1: #ffd355; /* Dorado */
+  --color-1-v2: #25d366; /* Verde Claro (WhatsApp) */
+  --color-1-v3: #28a745; /* Verde Oscuro (Enviar Correo) */
 
-  --color-2: #202020;
-
+  --color-2: #202020; /* Negro */
+  --color-principal: #54565f;
   --color-3: rgb(165, 165, 165);
 
-  --color-w: white;
+  --color-w: #ffffff; /* Blanco */
   --color-w-v2: rgb(248, 248, 248);
-  --color-w-v3: rgb(243, 243, 243);
+  --color-w-v3: #f4f4f4; /* Fondo claro para imágenes de perfil */
   --color-w-v4: rgb(214, 214, 214);
 
   --color-b: black;
   --color-b-v2: rgb(24, 24, 24);
-  --color-b-v3: rgb(151, 151, 151);
+  --color-b-v3: #7a7a7a; /* Gris Suave para textos */
   --color-b-v4: rgb(167, 167, 167);
 
-  --color-d: rgb(220, 53, 69);
+  --color-d: #e53935; /* Rojo para llamar */
   --color-s: rgb(38, 182, 84);
 
   --color-c1: rgb(255, 255, 255);
@@ -63,16 +63,17 @@
   --color-c3: rgb(235, 235, 235);
   --color-border: rgb(204, 204, 204);
   --color-border2: rgba(0, 0, 0, 0.05);
-  --color-background: rgb(137, 210, 191);
+  --color-background: rgb(6, 5, 5);
   --color-d-rgb: 220, 53, 69;
   --color-s-rgb: 38, 182, 84;
 
-  --br: 0.6rem;
-  --br-v2: 1rem;
   --br-v3: 0.3rem;
 
   --p-1: 1.25rem;
-  --py-1: 1.5rem;
+
+  --br: 8px; /* Bordes redondeados generales */
+  --br-v2: 10px; /* Bordes redondeados más grandes */
+  --py-1: 1rem; /* Margen vertical */
 }
 
 *,

@@ -36,12 +36,18 @@ import employees from "@/data/employee.json";
 
 const employeesList = ref([]);
 
-const companyInfo = company[0];
+const companyInfo = ref({});
+
 function filter() {
-  return employees.filter((employee) => employee.company == company[0].id);
+  //companyInfo = company.find((company) => company.id == $route.params.id);
+
+  return employees.filter(
+    (employee) => employee.company == companyInfo.value.id
+  );
 }
 filter();
 onMounted(() => {
+  companyInfo.value = company.find((company) => company.id == 3);
   employeesList.value = filter();
 });
 </script>
@@ -57,7 +63,7 @@ onMounted(() => {
   background: var(--color-c2);
   color: var(--color-b-v2);
   border-radius: var(--br-v2);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(98, 93, 93, 0.1);
   max-width: 800px;
   margin: 2rem auto;
 }
@@ -69,12 +75,10 @@ onMounted(() => {
 }
 
 .empresa-logo {
-  width: 120px;
+  width: 400px;
   height: auto;
   margin-bottom: 1rem;
-  border-radius: 50%;
-  border: 3px solid var(--color-1);
-  background: var(--color-w);
+
   padding: 0.5rem;
 }
 
