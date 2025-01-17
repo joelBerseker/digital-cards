@@ -108,7 +108,7 @@ onMounted(() => {
 }
 
 .company-logo {
-  width: 200px;
+  width: 120px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -181,6 +181,9 @@ h2 {
 }
 .youtube {
   color: #ff0000;
+}
+.linkedin {
+  color: #0077b5;
 }
 
 /* Botones de Contacto */

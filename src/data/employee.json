@@ -44,7 +44,25 @@
       "facebook": "https://facebook.com/maria",
       "instagram": "https://instagram.com/maria",
       "tiktok": "https://tiktok.com/@maria",
-      "youtube": "https://youtube.com/maria"
+      "youtube": "https://youtube.com/maria",
+      "linkedin": "https://youtube.com/maria"
+    },
+    "foto": "/image/employee/felix.jpg"
+  },
+  {
+    "id": "rodrigo",
+    "company": 1,
+    "nombre": "Gianfranco Rodrigo Aguilar Mendoza",
+    "puesto": "Feder de la Vida",
+    "telefono": "992144938",
+    "correo": "felix@traccionestrategica.com",
+    "whatsapp": "+51992144938",
+    "redes": {
+      "facebook": "https://facebook.com/maria",
+      "instagram": "https://instagram.com/maria",
+      "tiktok": "https://tiktok.com/@maria",
+      "youtube": "https://youtube.com/maria",
+      "linkedin": "https://youtube.com/maria"
     },
     "foto": "/image/employee/felix.jpg"
   }
