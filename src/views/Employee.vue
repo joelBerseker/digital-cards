@@ -83,7 +83,6 @@ onMounted(() => {
   }
 });
 </script>
-
 <style scoped>
 /* Contenedor Principal */
 .employee-card {
@@ -95,6 +94,7 @@ onMounted(() => {
   justify-content: space-between; /* Espaciado para los elementos internos */
   align-items: center;
   padding: 20px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
   border-radius: var(--br-v2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: var(--color-w);
@@ -269,8 +269,14 @@ h2 {
   }
 
   .employee-photo-wrapper {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .employee-name {
+    font-size: 1rem;
+    margin-top: 10px;
   }
 
   .btn {
