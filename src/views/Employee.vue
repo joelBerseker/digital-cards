@@ -241,7 +241,12 @@ h2 {
 
 /* Footer */
 .card-footer {
-  margin-top: 20px;
+  margin-top: auto; /* Empuja el footer hacia el final del contenedor */
+  flex-shrink: 0;
+  width: 100%;
+  background: var(--color-w);
+  padding: 10px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer-links {
@@ -255,10 +260,11 @@ h2 {
   color: var(--color-2);
   font-size: 0.9rem;
 }
+
 @media (max-width: 768px) {
   .employee-card {
     max-width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px;
     border-radius: 0;
   }
@@ -282,6 +288,10 @@ h2 {
   .btn {
     font-size: 0.9rem;
     padding: 8px;
+  }
+
+  .card-footer {
+    padding: 5px 0;
   }
 }
 </style>
