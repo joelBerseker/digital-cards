@@ -50,7 +50,13 @@
       <div class="footer-links">
         <a href="#" class="share">Compartir</a>
         <a :href="empleado.web" class="web">Web</a>
-        <a href="#" class="qr">QR</a>
+        <a href="#" class="qr" @click="showModal = true">QR</a>
+      </div>
+    </div>
+    <div v-if="showModal" class="modal">
+      <div class="modal-content">
+        <span class="close" @click="showModal = false">&times;</span>
+        <img :src="empleado.qr" alt="QR del empleado" />
       </div>
     </div>
   </div>
@@ -61,7 +67,7 @@ import { ref, onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import employeesData from "@/data/employee.json";
 import companyData from "@/data/company.json";
-
+const showModal = ref(false);
 const route = useRoute();
 const empleado = ref({});
 const empresa = ref({});
@@ -293,5 +299,38 @@ h2 {
   .card-footer {
     padding: 5px 0;
   }
+}
+/** MODAL */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
 }
 </style>
