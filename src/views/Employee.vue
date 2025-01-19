@@ -41,8 +41,18 @@
           :href="`https://wa.me/${empleado.whatsapp}`"
           target="_blank"
           class="btn whatsapp"
-          >💬 Enviar mensaje</a
         >
+          Enviar mensaje W.</a
+        >
+        <a
+          v-if="empleado.file"
+          :href="empleado.file"
+          target="_blank"
+          class="btn whatsapp"
+          download
+        >
+          📄 Más Información
+        </a>
       </div>
     </div>
 

@@ -50,7 +50,8 @@
     },
     "web": "https://www.traccionestrategica.com/",
     "foto": "/image/employee/felix.jpg",
-    "qr": "/image/employee/felix_qr.png"
+    "qr": "/image/employee/felix_qr.png",
+    "file": "/file/employee/felix.pdf"
   },
   {
     "id": "rodrigo",
@@ -69,6 +70,7 @@
     },
     "foto": "/image/employee/rodrigo.jpg",
     "qr": "/image/employee/rodrigo_qr.png",
-    "web": "/"
+    "web": "/",
+    "file": "/file/employee/felix.pdf"
   }
 ]
