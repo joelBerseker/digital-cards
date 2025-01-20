@@ -91,6 +91,31 @@ onMounted(() => {
     empresa.value = companyData.find(
       (company) => company.id == empleado.value.company
     );
+
+    // Cambiar el título dinámicamente
+    document.title = `${empleado.value.nombre} - ${empresa.value.nombre}`;
+
+    // Configurar Open Graph
+    const metaTags = [
+      {
+        name: "og:title",
+        content: `${empleado.value.nombre} - ${empresa.value.nombre}`,
+      },
+      { name: "og:description", content: empleado.value.puesto },
+      { name: "og:image", content: empleado.value.foto },
+      { name: "og:url", content: window.location.href },
+    ];
+
+    // Actualiza los meta tags
+    metaTags.forEach((meta) => {
+      let element = document.querySelector(`meta[name='${meta.name}']`);
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute("name", meta.name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute("content", meta.content);
+    });
   } else {
     // Redirect to error page if employee not found
     const router = useRouter();
