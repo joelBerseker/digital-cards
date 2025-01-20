@@ -133,7 +133,7 @@ onMounted(() => {
 }
 
 .company-logo {
-  width: 120px;
+  width: 150px;
   height: auto;
   margin-bottom: 10px;
 }
