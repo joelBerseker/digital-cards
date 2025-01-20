@@ -34,9 +34,7 @@
 
       <div class="contact-buttons">
         <a :href="`tel:${empleado.telefono}`" class="btn call">📞 Llamar</a>
-        <a :href="`mailto:${empleado.correo}`" class="btn email"
-          >📧 Enviar Correo</a
-        >
+
         <a
           :href="`https://wa.me/${empleado.whatsapp}`"
           target="_blank"
@@ -44,8 +42,11 @@
         >
           Enviar mensaje W.</a
         >
+        <a :href="`mailto:${empleado.correo}`" class="btn email"
+          >Enviar Correo</a
+        >
         <a
-          v-if="empleado.file"
+          v-if="empleado.files"
           :href="empleado.file"
           target="_blank"
           class="btn whatsapp"
