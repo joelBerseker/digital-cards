@@ -140,7 +140,7 @@ onMounted(() => {
 .card-header h1 {
   font-size: 1.8rem;
   font-family: "Lilita_One", sans-serif;
-  color: var(--color-1); /* Dorado */
+  color: #f8931f; /* Dorado */
   margin: 0;
 }
 
