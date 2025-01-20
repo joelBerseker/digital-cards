@@ -287,7 +287,7 @@ h2 {
   }
 
   .company-logo {
-    width: 80%;
+    width: auto;
     height: 50px;
   }
 
